@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby; -*-
+
+# https://github.com/fwcd/KotlinLanguageServer
+
+puts 'Cloning https://github.com/fwcd/KotlinLanguageServer.'
+puts `git clone https://github.com/fwcd/KotlinLanguageServer kls`
+puts 'Finished cloning...'
+puts 'Building server...'
+puts `cd kls; ./gradlew build -x test`
+puts 'Finished building KotlinLanguageServer.'
+pwd = `pwd`.delete!("\n") + '/kls/build/install/kotlin-language-server/bin'
+puts "Add #{pwd} to $PATH."
