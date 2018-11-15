@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby; -*-
+
+# https://github.com/MaskRay/ccls
+# https://github.com/twlz0ne/homebrew-ccls
+
+if `which ccls`.length > 0
+  puts 'ccls is already installed.'
+  puts 'Run brew upgrade ccls to upgrade.'
+else
+  puts 'Tapping https://github.com/twlz0ne/homebrew-ccls...'
+  puts `brew tap twlz0ne/homebrew-ccls`
+  puts 'Installing ccls with homebrew...'
+  puts `brew install ccls`
+end
