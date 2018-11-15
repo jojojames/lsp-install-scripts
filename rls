@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby; -*-
+
+# https://github.com/rust-lang-nursery/rls
+
+if `which rustup`.length == 0
+  puts 'Install rustup before running this script.'
+else
+  puts 'Updating rustup...'
+  puts `rustup update`
+  puts 'Installing rls components...'
+  puts `rustup component add rls-preview rust-analysis rust-src`
+  puts 'Finished installing rls.'
+end
