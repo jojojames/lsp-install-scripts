@@ -1,0 +1,4 @@
+Set of scripts to set up language servers for LSP.
+
+Short scripts meant to emulate what it would look like to install the language
+server by entering commands into a terminal directly.
