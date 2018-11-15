@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby; -*-
+
+# https://github.com/sourcegraph/go-langserver
+
+if `which go`.length == 0
+  puts 'Install go before running this script.'
+else
+  puts 'Installing go-langserver from github.com/sourcegraph/go-langserver.'
+  puts `go get -u github.com/sourcegraph/go-langserver`
+  puts `Finished installing go-langserver.`
+end
