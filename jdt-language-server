@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby; -*-
+
+# https://github.com/eclipse/eclipse.jdt.ls
+
+puts 'Downloading jdt-language-server...'
+puts `wget "http://download.eclipse.org/jdtls/snapshots/jdt-language-server-latest.tar.gz"`
+puts `mkdir jdt-language-server-latest`
+puts 'Extracting jar...'
+puts `tar -xvf jdt-language-server-latest.tar.gz -C jdt-language-server-latest`
+puts 'Cleaning up...'
+puts `rm jdt-language-server-latest.tar.gz`
+puts 'Finishied installing jdt-language-server.'
